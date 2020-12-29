@@ -314,10 +314,12 @@ class App:
     def line_evaluation(self, parent_callback, bloc_line_index):
         # construct text
         text = []
-        back_count = 0
         bloc_index, line_index = self.selected_bloc_lines[bloc_line_index]
         for back_count in range(self.HISTORY_LENGTH):
-            div = html.DIV(self.selected_blocs[bloc_index]["lines"][line_index], Class=f"bloc_line_back_{back_count}")
+            raw_line = self.selected_blocs[bloc_index]["lines"][line_index]
+            end = raw_line.find(')')
+            div = html.DIV(Class=f"bloc_line_back_{back_count}")
+            div <= html.EM(raw_line[:end+1]) + raw_line[end+1:]
             character = self.selected_blocs[bloc_index]["character"]
             if character == didascalie_str:
                 div.classList.add("didascalie")
@@ -389,7 +391,7 @@ class App:
         else:
             print("choosing random bloc line")
             print(self.total_line_scores)
-            # TODO choose bloc line. Lexicographic order. Don't choose last bloc/line
+            # choose bloc line. Lexicographic order. Don't choose last bloc/line
             worst_score_number = 1000000000
             worst_indexes = []
             for bloc_line_index, (bloc, line) in enumerate(self.selected_bloc_lines):

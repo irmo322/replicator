@@ -31,7 +31,7 @@ Elle ouvre ses bras, ouvre son cœur.
 Si ce n'est pas malheureux de voir ça...
 
 Willy
-<em>(sortant de l'ombre)</em> Je suis venu...
+(sortant de l'ombre) Je suis venu...
 
 Fast
 On voit ça.
@@ -153,11 +153,11 @@ Ce n'est pas ça.
 Mon cœur est guéri.
 Une fois pour toutes.
 C'est très grave, Fast, regarde.
-<em>(Il lui tend le dossier du mondain)</em>
+(Il lui tend le dossier du mondain)
 On veut me faire taire.
 
 Fast
-<em>(feuilletant le dossier)</em> Je savais qu'on en arriverait là.
+(feuilletant le dossier) Je savais qu'on en arriverait là.
 
 Willy
 Qu'est-ce que tu veux dire ?
@@ -285,7 +285,7 @@ et trinquer avec toi, au bon vieux temps...
 La mort d'un traître, donnée par traîtrise.
 Mais je n'aurais peut-être pas d'autres occasions d'être sir Richard, fils de lord Beth.
 Alors, va pour l'épée.
-<em>(Il lance une arme à Willy.)</em>
+(Il lance une arme à Willy.)
 En garde, William Pig !
 Tu ne peux plus reculer.
 Tu dois payer.
@@ -308,7 +308,7 @@ Alors, gigolo ? Tu te dégonfles ?
 
 Willy
 Non, Richard. Je ne me dégonfle pas.
-<em>(Il ramasse l'épée que Richard lui a lancée.)</em>
+(Il ramasse l'épée que Richard lui a lancée.)
 Regarde.
 Je prends cette épée.
 Je n'ai jamais pris d'épée, et je la prends sans crainte.
@@ -404,10 +404,10 @@ C'est moi.
 C'est maman, et c'est moi.
 
 Giuletta
-<em>(désemparée)</em> Vous l'avez tué... Pourquoi ?
+(désemparée) Vous l'avez tué... Pourquoi ?
 
 Richard
-<em>(brandissant le médaillon)</em> Où l'a-t-il volé ? Où l'a-t-il volé ?
+(brandissant le médaillon) Où l'a-t-il volé ? Où l'a-t-il volé ?
 
 Giuletta
 Ce qu'il volait, Fast le revendait.
