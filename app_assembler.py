@@ -37,6 +37,7 @@ def main():
     with open(template_app_file_path, "r", encoding='utf-8') as f:
         template_app_script = f.read()
     app_script = template_app_script.replace("##PYTHON_MAIN_SCRIPT##", python_main_script)
+    app_script = app_script.replace("##VERSION##", version)
     app_script = app_script.replace("<!--##BRYTHON_SCRIPT##-->", brython_script)
 
     with open(app_file_path, "w", encoding='utf-8') as f:
