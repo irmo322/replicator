@@ -1,6 +1,8 @@
 from browser import document, html
 
 
+version = "##VERSION##"
+
 raw_transcriptions = {
 ##RAW_TRANSCRIPTIONS##
 }
@@ -100,7 +102,7 @@ class SelectionScreen:
 
     def create_root(self):
         root = html.DIV()
-        root <= html.DIV(html.B("Replicator (v0.1)")) + html.BR()
+        root <= html.DIV(html.B(f"Replicator ({version})")) + html.BR()
         table = html.TABLE()
         table <= html.TR(html.TD("1. Sélectionner le personnage", Id="char_sel_panel_title")
                         + html.TD("2. Sélectionner la scène", Id="scene_sel_panel_title"))

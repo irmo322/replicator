@@ -3,11 +3,13 @@ import json
 
 
 def main():
+    version = "v0.1"
+
     res_folder = "transcriptions"
     template_app_file_path = "template_app.html"
     template_python_main_script_file_path = "template_python_main_script.py"
     brython_script_file_path = "deps/Brython-3.9.0/brython.min.js"
-    app_file_path = "webapp/replicator.html"
+    app_file_path = f"webapp/replicator_{version}.html"
 
     transcriptions = {}
 
@@ -27,6 +29,7 @@ def main():
     with open(template_python_main_script_file_path, "r", encoding='utf-8') as f:
         template_python_main_script = f.read()
     python_main_script = template_python_main_script.replace("##RAW_TRANSCRIPTIONS##", transcriptions_script[1:-1])
+    python_main_script = python_main_script.replace("##VERSION##", version)
 
     with open(brython_script_file_path, "r", encoding='utf-8') as f:
         brython_script = f.read()
