@@ -10,6 +10,7 @@ def main():
     template_python_main_script_file_path = "template_python_main_script.py"
     brython_script_file_path = "deps/Brython-3.9.0/brython.min.js"
     app_file_path = f"webapp/replicator_{version}.html"
+    github_app_file_path = "index.html"
 
     transcriptions = {}
 
@@ -41,6 +42,9 @@ def main():
     app_script = app_script.replace("<!--##BRYTHON_SCRIPT##-->", brython_script)
 
     with open(app_file_path, "w", encoding='utf-8') as f:
+        f.write(app_script)
+
+    with open(github_app_file_path, "w", encoding='utf-8') as f:
         f.write(app_script)
 
 
