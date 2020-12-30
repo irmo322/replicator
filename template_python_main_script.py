@@ -322,7 +322,7 @@ class App:
             raw_line = self.selected_blocs[bloc_index]["lines"][line_index]
             end = raw_line.find(')')
             div = html.DIV(Class=f"bloc_line_back_{back_count}")
-            div <= html.EM(raw_line[:end+1]) + raw_line[end+1:]
+            div <= html.EM(raw_line[:end+1]) + html.SPAN(raw_line[end+1:])
             character = self.selected_blocs[bloc_index]["character"]
             if character == didascalie_str:
                 div.classList.add("didascalie")
