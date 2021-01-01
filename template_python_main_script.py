@@ -345,7 +345,7 @@ class App:
             if button_index == 0:
                 parent_callback(result)
             else:
-                text.extend([html.HR(), html.DIV("Répéter les 2 phrases en couleur jusqu'à les connaître par cœur.")])
+                text.extend([html.HR(), html.DIV("Répéter les phrases en couleur jusqu'à les connaître par cœur.")])
                 button_contents = ["C'est fait."]
                 document <= create_question_panel(text, button_contents, lambda i: parent_callback(result))
 
@@ -358,7 +358,8 @@ class App:
                 autonote_callback(2)
 
         # question
-        question_button_contents = ["J'ai la prochaine phrase en tête.", "Je ne me souviens pas de la suite 😔"]
+        question_button_contents = ["Je me souviens de la suite et je l'ai récitée.",
+                                    "Je ne me souviens pas de la suite 😔"]
         text[-1].classList.add("hidden")
         document <= create_question_panel(text, question_button_contents, question_callback)
 
@@ -420,7 +421,7 @@ class App:
         message = html.DIV()
         message <= html.DIV("On y est presque !")
         message <= html.BR()
-        message <= html.DIV("La dernière phase reprend le texte dans l'ordre pour remettre les choses en place "
+        message <= html.DIV("La dernière étape reprend le texte dans l'ordre pour remettre les choses en place "
                             "et évaluer la progression.")
 
         button_contents = ["Allons-y ! [Alonzo]"]
