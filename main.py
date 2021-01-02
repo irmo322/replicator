@@ -2,7 +2,7 @@ import random
 
 
 def main():
-    with open("transcriptions/scene_7.txt") as f:
+    with open("transcriptions/scene_16.txt") as f:
         file_lines = [line.strip() for line in f.readlines()]
 
     theatrical_lines = []
