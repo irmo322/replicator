@@ -1,8 +1,15 @@
 import random
 
 
-def main():
-    with open("transcriptions/scene_10.txt") as f:
+all_characters = {"Willy", "Fast", "Bottom", "Giuletta", "Richard", "Lady Beth",
+                  "Le juriste", "Le clergyman", "Le scientifique", "Le psychiatre", "Le mondain",
+                  "Didascalie"}
+
+
+def check_scene(scene_number):
+    print(f"scene {scene_number}")
+
+    with open(f"transcriptions/scene_{scene_number}.txt") as f:
         file_lines = [line.strip() for line in f.readlines()]
 
     theatrical_lines = []
@@ -20,6 +27,9 @@ def main():
     characters = set([plop["character"] for plop in theatrical_lines])
 
     print(f"Characters : {characters}")
+
+    assert characters.issubset(all_characters)
+
     # while True:
     #     chosen_character = input("Choose character : ")
     #     if chosen_character not in characters:
@@ -50,6 +60,13 @@ def main():
     #     input("Appuie sur Enter pour vérifier ce qui vient ensuite...")
     #
     #     print(plop["lines"][j])
+
+
+def main():
+    for scene_number in range(1, 20):
+        if scene_number == 4:
+            continue
+        check_scene(scene_number)
 
 
 if __name__ == '__main__':
