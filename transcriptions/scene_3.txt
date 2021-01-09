@@ -15,7 +15,7 @@ C'est fini, Fast.
 Assez pour ce soir.
 
 Didascalie
-Un temps. Fast se sert et lui demande d’un geste son assiette.
+Un temps. Fast se sert et lui demande d'un geste son assiette.
 
 Willy
 Je ne pourrai plus rien avaler.
@@ -56,7 +56,7 @@ Fast
 Pas pour un sou. C'est le royaume des moutons à cinq pattes.
 Ceux qui sont devenus improductifs…
 L'homme d'après-guerre était vif, optimiste, entreprenant, élégant, patriote, père de famille.
-Aujourd'hui, la société ne peut plus produire d’homo sapiens-sapiens avec toutes les finitions souhaitables…
+Aujourd'hui, la société ne peut plus produire d'homo sapiens-sapiens avec toutes les finitions souhaitables…
 Alors, on établit des labels de qualité et on fait le tri,
 mais on n'a pas encore trouvé de solution pour le recyclage du rebut.
 
@@ -85,8 +85,9 @@ Moi, je peux remplir sa main.
 Fast
 C'est ta part, c'est toi qui vois.
 Tant que tu y es, donne donc ta chemise au fou d'à côté !
-Il travaillait dans un laboratoire, à ce qu'il parait.
-Il mettait des trucs dans le formol pour les conserver, et, de temps en temps, il en disséquait un. Mais un jour, il s'est cru à table, il s'est mis à manger tout le stock,
+Il travaillait dans un laboratoire, à ce qu'il paraît.
+Il mettait des trucs dans le formol pour les conserver, et, de temps en temps, il en disséquait un.
+Mais un jour, il s'est cru à table, il s'est mis à manger tout le stock,
 arrosé avec de l'alcool à quatre-vingt-dix degrés, et je ne sais quoi encore.
 Toutes les saloperies qui lui tombaient sous la main.
 Il a trente ans, il en fait le triple.
@@ -106,14 +107,14 @@ Elle le fera jusqu'à sa mort. On a sa fierté, sapristi !
 Didascalie
 Sans répondre, Willy s'éloigne.
 Un moment de silence. Fast sifflote.
-On entend un hurlement de femme. Willy revient, penaud, et torse nu.
+On entend un hurlement de femme. Willy revient, penaud et torse nu.
 
 Willy
 Je lui ai fait peur.
 
 Fast
 À Rosy ? Sans blague ?
-Elle en a vu d'autres !...
+elle en a vu d'autres !...
 Tu es allé lui grogner sous le nez ?
 
 Willy
@@ -164,7 +165,7 @@ celle qui t'a amené au dernier sous-sol, toi aussi.
 
 Fast
 Crois ce que tu veux, je m'en contrefous.
-C'est toi, le héros …
+C'est toi, le héros…
 Moi, je ne suis pas né de la dernière scène.
 Je n'ai pas été nourri aux mamelles shakespeariennes.
 
@@ -172,7 +173,7 @@ Willy
 Pourtant…
 
 Fast
-Motus. Mon histoire, c’est mon histoire, vu ?
+Motus. Mon histoire, c'est mon histoire, vu ?
 
 Willy
 Vu. Ne te fâche pas.
@@ -196,7 +197,7 @@ Fast
 Bonne nouvelle, princesse, la soupe est chaude.
 
 Giuletta
-J’arrive.
+J'arrive.
 
 Didascalie
 Giuletta finit sa traversée pour descendre de son fil et venir les rejoindre.
@@ -291,9 +292,9 @@ Oui. Comment le savez-vous ?
 Willy
 Vous marchez sur ce fil pour... houps !...
 <i>Voici l’air, voici le soleil glorieux</i>
-<i>Cette perle qu’elle m’a donnée, je la sens et je la vois</i>
+<i>Cette perle qu’elle m’a donnée, je la sens et je la vois... houps !...</i>
 <i>Et bien que ce soit une merveille qui m’enveloppe ainsi</i>
-<i>Ce n’est pourtant pas de la démence</i>
+<i>Ce n’est pourtant pas de la démence...</i>
 
 Fast
 Tiens. Bois encore un coup, vieux frère.
@@ -311,12 +312,12 @@ Comment ça, passé ?
 Willy
 Quand les phrases me viennent, on dirait qu'une foule se forme sous mon crâne.
 Chacune de ces phrases bouscule l'autre pour arriver la première entre mes dents.
-Quand j'ouvre la bouche, elle s'envole, et, aussitôt, la suivante se précipite ; et ainsi de suite…
-Et tout à coup, c’est terminé, c'est passé.
-Les mots s’échappent et se dissolvent dans l’air.
+Quand j'ouvre la bouche, elle s'envole, et, aussitôt, la suivante se précipite, et ainsi de suite…
+Et tout à coup, c'est terminé, c'est passé.
+Les mots s'échappent et se dissolvent dans l'air.
 
 Fast
-Willy s'est branché direct sur l’inspiration, mail il y a encore de la friture sur la ligne.
+Willy s'est branché directement sur l'inspiration, mais il y a encore de la friture sur la ligne.
 
 Giuletta
 C'est toi, la friture, Fast. Tu l'as interrompu !

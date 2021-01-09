@@ -3,7 +3,7 @@ import json
 
 
 def main():
-    version = "v0.1.8"
+    version = "v0.1.9"
 
     res_folder = "transcriptions"
     template_app_file_path = "template_app.html"
