@@ -11,7 +11,7 @@ Un homme passe vite, apeuré. Fast le poursuit, l'interpelle.
 Fast
 La vie est étrange, Monsieur, je veux vous rendre service et cela vous fâche.
 C'est gratuit, Monsieur, profitez-en.
-Si votre meilleur ami - à condition qu'on puisse avoir des amis en ce bas monde -
+Si votre meilleur ami - à condition qu'on puisse avoir des amis en ce bas monde —
 refuse de vous rendre service gratuitement, Fast le fera.
 Parce qu'un philosophe, Monsieur, est nécessairement l'ami du genre humain.
 Fast ne cherche pas la pièce, Fast ne tend pas la main.
@@ -32,7 +32,7 @@ Barquette de saumon mayonnaise, turbot à la purée d'huîtres vertes,
 pâté chaud de pluviers dorés, dinde à la financière,
 galantine de gibier à la gelée de groseilles, bœuf bouilli au potiron,
 pouding de cabinet à l'orange, et une bonne bouteille de Mercurey
-- le seul vin de France dont le nom sonne anglais !
+— le seul vin de France dont le nom sonne anglais !
 Vive le Mercurey !...
 À votre santé, Monsieur !
 
@@ -51,7 +51,7 @@ Fast
 On t'a dépouillé ? On t'a battu ? Bienvenue, frère !
 Et d'ailleurs non ! Je te vois venir, toi : tu l'as senti de loin, le festin !...
 On t'a tout pris ? Maintenant, tu viens demander l'aide de Fast ?
-T'as reniflé les provisions de Fast ?
+t'as reniflé les provisions de Fast ?
 Mais n'y compte pas mon gars, pas question.
 Par ici, quand on sauve sa peau, on n'en demande pas plus.
 L'autre jour, tu vois, ils ont carrément grillé un gus.
@@ -105,7 +105,7 @@ L'homme ne vit pas seulement de pain.
 
 Bottom
 Le crédit n'est même pas fini, mais il va payer, l'enflure !
-En saucisson et en boudin, c'est moi qui vous le dis.
+en saucisson et en boudin, c'est moi qui vous le dis.
 
 Didascalie
 Il aperçoit le groin qui sort de la niche.
@@ -208,7 +208,6 @@ Dis-moi, tu l'as échappé belle !
 Explique-moi un peu quand même quelle espèce de bestiole tu peux être :
 sûr que tu as le pif porcin, sûr que tu ne sens pas la rose,
 mais pour le reste, objectivement, tu as des jambes, des bras, des mains, une bouche...
-
 
 Willy
 Les mains, je savais déjà.
