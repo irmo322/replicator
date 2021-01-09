@@ -64,8 +64,8 @@ def check_scene(scene_number):
 
 def main():
     for scene_number in range(1, 20):
-        if scene_number == 4:
-            continue
+        # if scene_number == 4:
+        #     continue
         check_scene(scene_number)
 
 
