@@ -82,7 +82,7 @@ Bottom
 Où qu'il est, ce cochon-là ?
 
 Fast
-Et en voilà un autre, maintenant !
+Et en voilà une autre, maintenant !
 
 Bottom
 Vous l'avez vu ?
@@ -108,7 +108,7 @@ Le crédit n'est même pas fini, mais il va payer, l'enflure !
 en saucisson et en boudin, c'est moi qui vous le dis.
 
 Didascalie
-Il aperçoit le groin qui sort de la niche.
+Elle aperçoit le groin qui sort de la niche.
 
 Bottom
 Là ! c'est lui ! C'est mon porc.
@@ -123,18 +123,18 @@ Dis donc, comment t'appelle-t-on ?
 
 Bottom
 Je m'appelle Bottom, j'ai une ferme vers le nord, par là.
-Pas facile d'être paysan, aujourd'hui.
+Pas facile d'être paysanne, aujourd'hui.
 De temps en temps, il faut vendre une bête.
 De temps en temps, la bête s'échappe.
 Tel que vous me voyez j'allais à l'abattoir.
 
 Fast
-Tu fais ton chemin, mon vieux, tu traces ta route.
+Tu fais ton chemin, ma vieille, tu traces ta route.
 Bon voyage, et que Dieu te garde.
 
 Bottom
 Amen... Monsieur, rendez-moi mon cochon.
-Je suis un homme pacifique, je ne veux pas d'histoires, je veux juste mon cochon.
+Je suis une femme pacifique, je ne veux pas d'histoires, je veux juste mon cochon.
 Je ne comprends rien à votre philosophie.
 Vous dites que vous ne l'avez pas vu, mais il est là, dans cette niche, tout le monde peut le voir.
 Et vous dites qu'il n'y est pas.
@@ -163,8 +163,8 @@ Holà ! Des menaces ?
 Bottom
 Ou alors, je récupère mon bien et on n'en parle plus.
 J'en ai assez de discuter.
-Ma femme m'attend, et les enfants.
-Ils vont s'inquiéter. Je suis fatigué.
+Mon homme m'attend, et les enfants.
+Ils vont s'inquiéter. Je suis fatiguée.
 Si je m'endors au volant, mes enfants seront orphelins et ne pourront pas faire les écoles.
 
 Fast
@@ -176,21 +176,21 @@ Je veux juste mon cochon !
 Fast
 Holà ! Porteur de mon manteau !
 Satané buveur de mon whisky !
-Le sieur Bottom te réclame, rapport à l'avenir de sa progéniture.
+La dame Bottom te réclame, rapport à l'avenir de sa progéniture.
 Sors de là ou je viens te chercher !
 
 Didascalie
 L'inconnu sort de la niche.
-En le voyant, Bottom reste pétrifié, puis pousse un hurlement avant de prendre ses jambes à son cou.
+En le voyant, Bottom reste pétrifiée, puis pousse un hurlement avant de prendre ses jambes à son cou.
 Le camion repart en pétaradant, crissements de pneus.
 
 Fast
-En voilà un tordu ! Bon débarras.
+En voilà une tordue ! Bon débarras.
 Dis donc, mon cochon, c'est vrai que tu as une tronche de porc !
 Voyons voir un peu : tu connais cet oiseau-là ?
 
 Willy
-M... Maître Bo... Bottom.
+M... Maîtresse Bo... Bottom.
 
 Fast
 Là, je t'arrête, mon vieux.
@@ -200,10 +200,10 @@ Ce n'est pas que ça m'intéresse, note bien, mais Fast se doit de comprendre ce
 Principe philosophique.
 
 Willy
-Il a... dit la... vé... vérité.
+Elle a... dit la... vé... vérité.
 
 Fast
-Alors comme ça, tu es un porc et le digne Bottom t'emmenait à l'abattoir.
+Alors comme ça, tu es un porc et la digne Bottom t'emmenait à l'abattoir.
 Dis-moi, tu l'as échappé belle !
 Explique-moi un peu quand même quelle espèce de bestiole tu peux être :
 sûr que tu as le pif porcin, sûr que tu ne sens pas la rose,
@@ -247,7 +247,7 @@ Willy
 (soudain volubile) C'est après avoir mangé les livres.
 J'avais faim, vous comprenez.
 Bottom ne me donnait presque plus rien,
-à cause de la crise, réduction de budget, il disait.
+à cause de la crise, réduction de budget, elle disait.
 Seulement des épluchures, et des épluchures, toujours des épluchures…
 Les restes, même les marrons, les gros marrons d'automne,
 ils se les gardaient pour eux, dans la maison.

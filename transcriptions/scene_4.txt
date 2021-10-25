@@ -10,25 +10,25 @@ Publicités. Entre Bottom.
 
 Fast
 Bienvenue, ô génie de la terre !
-Ma petite Giuletta, je te présente monsieur Bottom, cultivateur cultivé :
-c'est lui qui a nourri notre Willy de la meilleure littérature.
+Ma petite Giuletta, je te présente madame Bottom, cultivatrice cultivée :
+c'est elle qui a nourri notre Willy de la meilleure littérature.
 
 Giuletta
-Vraiment ? Charmée, monsieur.
+Vraiment ? Charmée, madame.
 
 Bottom
 Monsieur, je ne sais pas ce qui motive votre conduite,
-mais je vous prierais de ne pas vous moquer d'un homme simple.
+mais je vous prierais de ne pas vous moquer d'une femme simple.
 J'ai beaucoup réfléchi...
 
 Fast
 Sans blagues !
 
 Giuletta
-Laisse-le parler, Fast.
+Laisse-la parler, Fast.
 
 Bottom
-L'autre nuit, j'étais fatigué, énervé.
+L'autre nuit, j'étais fatiguée, énervée.
 Je ne sais pas comment vous avez profité de mon état et vous avez changé ma vision de...
 
 Giuletta
@@ -132,7 +132,7 @@ Didascalie
 Applaudissements.
 
 Fast
-Tu vois, mon gars : il y a un huissier, et assermenté !
+Tu vois, ma vieille : il y a un huissier, et assermenté !
 Qu'est-ce que tu en dis?
 
 Bottom

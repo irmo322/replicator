@@ -4,8 +4,8 @@
 # Pour voir à quoi doit ressembler une transcription, prendre exemple sur les scènes 7, 11 et 18.
 
 Didascalie
-Dans un laboratoire de charcuterie industrielle, Bottom, vêtu d'une blouse blanche, et Willy :
-ce dernier a entraîné à l'écart son ancien maître.
+Dans un laboratoire de charcuterie industrielle, Bottom, vêtue d'une blouse blanche, et Willy :
+ce dernier a entraîné à l'écart son ancienne maîtresse.
 
 Bottom
 Belle cérémonie. Bien belle.
@@ -18,7 +18,7 @@ Et tellement plus.
 (Désignant les installations autour d'eux.) Tout ça, c'est l'argent que vous m'avez donné.
 
 Willy
-Vous êtes dédommagé.
+Vous êtes dédommagée.
 
 Bottom
 C'est peu de le dire.
@@ -59,7 +59,7 @@ On vous a ruiné en bouquins, et variés encore :
 Shakespeare, Joyce, Locke, et même des œuvres d'étrangers comme Goethe ou Molière.
 C'est le libraire, par chez nous, qui me les a conseillés.
 Il me regardait avec des yeux humides.
-Il a dit que j'étais touché par la grâce.
+Il a dit que j'étais touchée par la grâce.
 Je ne lui ai pas raconté que j'achetais tout ça comme complément alimentaire pour bétail,
 il aurait eu une attaque, voyez.
 Et alors, comme je vous disais, pas le moindre début de commencement d'une métamorphose.
@@ -79,13 +79,13 @@ c'est votre dame qui l'a choisi et elle s'y connaît, foutu veinard !
 Ce n'est pas elle qui vous ferait bouffer les cochonneries qu'on fait maintenant !
 
 Willy
-Allez-y, monsieur Bottom. Je vous rejoindrai.
+Allez-y, madame Bottom. Je vous rejoindrai.
 
 Bottom
 Et encore merci.
 
 Didascalie
-Il sort.
+Elle sort.
 
 Willy
 (seul) <i>Être ou ne pas être.</i>
@@ -111,7 +111,7 @@ Entre lady Beth qui le fait légèrement sursauter.
 Lady Beth
 Eh bien, cher, n'est-ce pas magnifique ?
 Vous êtes dans les honneurs.
-Votre idée de parrainer une entreprise de votre ancien patron est très judicieuse.
+Votre idée de parrainer une entreprise de votre ancienne patronne est très judicieuse.
 Excellent pour votre image.
 Les Anglais aiment le fair-play.
 
