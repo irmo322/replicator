@@ -14,6 +14,28 @@ didascalie_str = "Didascalie"
 
 n_scenes = 19
 
+pretty_scene_names = [
+    "I.1",
+    "I.2",
+    "I.3",
+    "II.1",
+    "II.2",
+    "II.3",
+    "II.4",
+    "II.5",
+    "II.6",
+    "II.7",
+    "III.1",
+    "III.2",
+    "III.3",
+    "III.4",
+    "III.5",
+    "III.6",
+    "III.7",
+    "IV.1",
+    "IV.2",
+]
+
 
 def deepcopy(e):
     if isinstance(e, list):
@@ -151,7 +173,7 @@ class SelectionScreen:
         for i in range(1, n_scenes + 1):
             scene_id = f"scene_{i}"
             if scene_id in self.transcriptions:
-                button = html.BUTTON(f"Scène {i}", Class="scene_button")
+                button = html.BUTTON(f"Scène {i} - {pretty_scene_names[i-1]}", Class="scene_button")
 
                 def get_button_action(scene_id):
                     def button_action(event):
@@ -185,7 +207,7 @@ class SelectionScreen:
 
                 scene_selection_panel <= html.DIV(button)
             else:
-                scene_selection_panel <= html.DIV(f"(Scène {i} manquante)", Class="missing_scene")
+                scene_selection_panel <= html.DIV(f"(Scène {i} manquante - {pretty_scene_names[i-1]})", Class="missing_scene")
         return scene_selection_panel
 
     def create_start_game_panel(self):
