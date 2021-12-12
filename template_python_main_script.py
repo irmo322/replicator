@@ -107,6 +107,83 @@ def create_question_panel(message, button_contents, callback):
     return panel
 
 
+class MenuScreen:
+    def __init__(self):
+        self.action_observable = Observable(None)
+        self.html_root = self.create_root()
+
+    def get_html_component(self):
+        return self.html_root
+
+    def create_root(self):
+        root = html.DIV()
+        root <= html.DIV(html.B(f"Replicator ({version})")) + html.BR()
+        root <= html.DIV(html.B("Faites un choix :")) + html.BR()
+
+        menu_panel = html.TABLE(Id="menu_panel")
+        buttons = html.TR()
+        menu_panel <= buttons
+
+        def get_button_action(action):
+            def button_action(event):
+                self.action_observable.value = action
+
+            return button_action
+
+        for action, action_pretty in zip(["read_scene", "learn_scene"], ["Lire une scène", "Apprendre une scène"]):
+            button = html.BUTTON(action_pretty, Class="menu_button")
+            button.bind("click", get_button_action(action))
+            buttons <= html.TD(html.DIV(button))
+
+        root <= menu_panel
+        return root
+
+    def remove_root(self):
+        self.html_root.remove()
+
+
+class ReadingSelectionScreen:
+    def __init__(self, transcriptions):
+        self.transcriptions = transcriptions
+        self.scene_observable = Observable(None)
+
+        self.html_root = self.create_root()
+
+    def get_html_component(self):
+        return self.html_root
+
+    def create_root(self):
+        root = html.DIV()
+        root <= html.DIV(html.B(f"Replicator ({version})")) + html.BR()
+        table = html.TABLE()
+        table <= html.TR(html.TD("Sélectionner la scène", Id="scene_sel_panel_title"))
+        table <= html.TR(html.TD(self.create_scene_selection_panel(), Id="scene_sel_panel_td"))
+        root <= table
+        return root
+
+    def remove_root(self):
+        self.html_root.remove()
+
+    def create_scene_selection_panel(self):
+        scene_selection_panel = html.DIV()
+        for i in range(1, n_scenes + 1):
+            scene_id = f"scene_{i}"
+            if scene_id in self.transcriptions:
+                button = html.BUTTON(f"Scène {i} - {pretty_scene_names[i-1]}", Class="scene_button")
+
+                def get_button_action(scene_id):
+                    def button_action(event):
+                        self.scene_observable.value = scene_id
+                    return button_action
+
+                button.bind("click", get_button_action(scene_id))
+
+                scene_selection_panel <= html.DIV(button)
+            else:
+                scene_selection_panel <= html.DIV(f"(Scène {i} manquante - {pretty_scene_names[i-1]})", Class="missing_scene")
+        return scene_selection_panel
+
+
 class SelectionScreen:
     def __init__(self, transcriptions):
         self.transcriptions = transcriptions
@@ -275,7 +352,43 @@ class App:
             }
 
     def start(self):
-        self.start_selection()
+        self.start_menu()
+
+    def start_menu(self):
+        menu_screen = MenuScreen()
+
+        def start_observable_callback(observable):
+            if observable.value:
+                menu_screen.remove_root()
+                self.selected_action = menu_screen.action_observable.value
+                assert self.selected_action in ["read_scene", "learn_scene"]
+                if self.selected_action == "read_scene":
+                    self.start_reading_scene()
+                else:
+                    self.start_selection()
+
+        menu_screen.action_observable.subscribe(start_observable_callback)
+        document <= menu_screen.get_html_component()
+
+    def start_reading_scene(self):
+        reading_selection_screen = ReadingSelectionScreen(self.transcriptions)
+
+        def scene_observable_callback(observable):
+            if observable.value:
+                reading_selection_screen.remove_root()
+
+                self.selected_scene = reading_selection_screen.scene_observable.value
+                self.selected_blocs = self.transcriptions[self.selected_scene]["blocs"]
+
+                self.selected_bloc_lines = [(bloc_index, line_index)
+                                            for bloc_index, bloc in enumerate(self.selected_blocs)
+                                            if bloc["character"] == self.selected_character
+                                            for line_index in range(len(bloc["lines"]))]
+
+                self.simple_reading()
+
+        reading_selection_screen.scene_observable.subscribe(scene_observable_callback)
+        document <= reading_selection_screen.get_html_component()
 
     def start_selection(self):
         selection_screen = SelectionScreen(self.transcriptions)
@@ -297,6 +410,35 @@ class App:
 
         selection_screen.start_observable.subscribe(start_observable_callback)
         document <= selection_screen.get_html_component()
+
+    def simple_reading(self):
+        # construct text
+        text = []
+        bloc_index = len(self.selected_blocs) - 1
+        line_index = len(self.selected_blocs[bloc_index]["lines"]) - 1
+        while True:
+            raw_line = self.selected_blocs[bloc_index]["lines"][line_index]
+            end = raw_line.find(')')
+            div = html.DIV()
+            div <= html.EM(raw_line[:end + 1]) + html.SPAN(raw_line[end + 1:])
+            character = self.selected_blocs[bloc_index]["character"]
+            if character == didascalie_str:
+                div.classList.add("didascalie")
+            text.insert(0, div)
+            if line_index == 0:
+                if character != didascalie_str:
+                    text.insert(0, html.DIV(character, Class="character_in_text"))
+                text.insert(0, html.BR())
+            if line_index > 0:
+                line_index -= 1
+            else:
+                if bloc_index > 0:
+                    bloc_index -= 1
+                    line_index = len(self.selected_blocs[bloc_index]["lines"]) - 1
+                else:
+                    break
+
+        document <= text
 
     def base_evaluation_introduction(self):
         message = html.DIV("""\
