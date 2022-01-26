@@ -313,6 +313,24 @@ class SelectionScreen:
         return start_game_panel
 
 
+def format_line(raw_line):
+    div = html.DIV()
+    while raw_line:
+        if raw_line[0] == "(":
+            end = raw_line.find(')')
+            if end == -1:
+                end = len(raw_line) - 1
+            div <= html.EM(raw_line[:end + 1])
+            raw_line = raw_line[end + 1:]
+        else:
+            begin = raw_line.find('(')
+            if begin == -1:
+                begin = len(raw_line)
+            div <= html.SPAN(raw_line[:begin])
+            raw_line = raw_line[begin:]
+    return div
+
+
 class App:
 
     HISTORY_LENGTH = 4
@@ -418,9 +436,7 @@ class App:
         line_index = len(self.selected_blocs[bloc_index]["lines"]) - 1
         while True:
             raw_line = self.selected_blocs[bloc_index]["lines"][line_index]
-            end = raw_line.find(')')
-            div = html.DIV()
-            div <= html.EM(raw_line[:end + 1]) + html.SPAN(raw_line[end + 1:])
+            div = format_line(raw_line)
             character = self.selected_blocs[bloc_index]["character"]
             if character == didascalie_str:
                 div.classList.add("didascalie")
@@ -484,9 +500,8 @@ class App:
         bloc_index, line_index = self.selected_bloc_lines[bloc_line_index]
         for back_count in range(self.HISTORY_LENGTH):
             raw_line = self.selected_blocs[bloc_index]["lines"][line_index]
-            end = raw_line.find(')')
-            div = html.DIV(Class=f"bloc_line_back_{back_count}")
-            div <= html.EM(raw_line[:end+1]) + html.SPAN(raw_line[end+1:])
+            div = format_line(raw_line)
+            div.classList.add(f"bloc_line_back_{back_count}")
             character = self.selected_blocs[bloc_index]["character"]
             if character == didascalie_str:
                 div.classList.add("didascalie")
