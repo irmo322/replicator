@@ -1,9 +1,8 @@
 import os
-import json
 
 
 def main():
-    version = "v2.0.1"
+    version = "v2.0.2"
 
     res_folder = "transcriptions"
     template_app_file_path = "template_app.html"
@@ -12,8 +11,7 @@ def main():
     app_file_path = f"webapp/replicator_{version}.html"
     github_app_file_path = "index.html"
 
-    transcriptions = {}
-
+    transcriptions_scripts = []
     for file_name in next(os.walk(res_folder))[2]:
         file_path = os.path.join(res_folder, file_name)
         name = os.path.splitext(file_name)[0]
@@ -21,15 +19,19 @@ def main():
         with open(file_path, "r", encoding='utf-8') as f:
             text = f.read()
 
-        transcriptions[name] = {
-            "text": text
-        }
+        transcription_script = f'''\
+    "{name}": {{
+        "text": """\\
+{text}"""
+    }},
+'''
+        transcriptions_scripts.append(transcription_script)
 
-    transcriptions_script = json.dumps(transcriptions, indent=4, ensure_ascii=False)
+    transcriptions_script = "".join(transcriptions_scripts)
 
     with open(template_python_main_script_file_path, "r", encoding='utf-8') as f:
         template_python_main_script = f.read()
-    python_main_script = template_python_main_script.replace("##RAW_TRANSCRIPTIONS##", transcriptions_script[1:-1])
+    python_main_script = template_python_main_script.replace("##RAW_TRANSCRIPTIONS##", transcriptions_script)
     python_main_script = python_main_script.replace("##VERSION##", version)
 
     with open(brython_script_file_path, "r", encoding='utf-8') as f:
