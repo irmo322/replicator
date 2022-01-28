@@ -2,7 +2,7 @@ import os
 
 
 def main():
-    version = "v2.0.2"
+    version = "v2.0.3"
 
     res_folder = "transcriptions"
     template_app_file_path = "template_app.html"

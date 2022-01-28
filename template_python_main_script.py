@@ -59,11 +59,11 @@ def randint(n):
 # Observer pattern implementation adapted from
 # https://stackoverflow.com/questions/1904351/python-observer-pattern-examples-tips/1925836#1925836
 # and https://stackoverflow.com/questions/6190468/how-to-trigger-function-on-value-change
-class Observable(object):
+class Observable:
     def __init__(self, value):
         self._old_value = None
         self._value = value
-        self.callbacks = []
+        self._callbacks = []
 
     @property
     def old_value(self):
@@ -80,24 +80,34 @@ class Observable(object):
         self.fire()
 
     def subscribe(self, callback):
-        self.callbacks.append(callback)
+        self._callbacks.append(callback)
 
     def fire(self):
-        for fn in self.callbacks:
-            fn(self)
-
-
-def get_question_button_action(panel, button_index, callback):
-    def question_button_action(event):
-        panel.remove()
-        callback(button_index)
-    return question_button_action
+        for callback in self._callbacks:
+            callback(self)
 
 
 def create_question_panel(message, button_contents, callback):
+    """
+    Create a panel with:
+    - a message
+    - multiple buttons
+    When a button is clicked, the panel is removed and the callback is called with the index of the clicked button.
+    :param message: string
+    :param button_contents: list of string
+    :param callback: function (int) -> None
+    :return: the panel.
+    """
     panel = html.DIV()
     panel <= message
     panel <= html.HR()
+
+    def get_question_button_action(panel, button_index, callback):
+        def question_button_action(event):
+            panel.remove()
+            callback(button_index)
+
+        return question_button_action
 
     for button_index, button_content in enumerate(button_contents):
         button = html.BUTTON(button_content)
@@ -560,10 +570,16 @@ class App:
         message <= html.BR() + html.DIV("Maintenant, le programme va vous soumettre des répliques dans un ordre "
                                         "aléatoire, en privilégiant celles posant difficultés.")
 
-        button_contents = ["Ok, c'est parti !"]
+        button_contents = [
+            "Ok, c'est parti en mode aléatoire !",
+            "Non, je préfère recommencer en mode séquentiel.",
+        ]
 
         def callback(button_index):
-            self.random_focus(0, None)
+            if button_index == 0:
+                self.random_focus(0, None)
+            else:
+                self.final_evaluation()
 
         document <= create_question_panel(message, button_contents, callback)
 
@@ -636,11 +652,17 @@ class App:
         message <= html.DIV("Vous pouvez maintenant continuer à travailler sur cette scène ou revenir à l'écran de "
                             "sélection.")
 
-        button_contents = ["Continuer avec cette scène", "Revenir à l'écran de sélection"]
+        button_contents = [
+            "Continuer avec cette scène en mode aléatoire",
+            "Continuer avec cette scène en mode séquentiel",
+            "Revenir à l'écran de sélection",
+        ]
 
         def callback(button_index):
             if button_index == 0:
                 self.random_focus(0, None)
+            elif button_index == 1:
+                self.final_evaluation()
             else:
                 self.start_selection()
 
