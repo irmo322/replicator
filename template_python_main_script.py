@@ -368,8 +368,9 @@ class App:
                     new_character = True
                 elif file_line[0] != "#":
                     if new_character:
-                        blocs.append({"character": file_line, "lines": []})
-                        scene_characters.add(file_line)
+                        line_characters = [w.strip() for w in file_line.split(",")]
+                        blocs.append({"characters": line_characters, "lines": []})
+                        scene_characters.update(line_characters)
                         new_character = False
                     else:
                         blocs[-1]["lines"].append(file_line)
@@ -408,11 +409,6 @@ class App:
                 self.selected_scene = reading_selection_screen.scene_observable.value
                 self.selected_blocs = self.transcriptions[self.selected_scene]["blocs"]
 
-                self.selected_bloc_lines = [(bloc_index, line_index)
-                                            for bloc_index, bloc in enumerate(self.selected_blocs)
-                                            if bloc["character"] == self.selected_character
-                                            for line_index in range(len(bloc["lines"]))]
-
                 self.simple_reading()
 
         reading_selection_screen.scene_observable.subscribe(scene_observable_callback)
@@ -431,7 +427,7 @@ class App:
 
                 self.selected_bloc_lines = [(bloc_index, line_index)
                                             for bloc_index, bloc in enumerate(self.selected_blocs)
-                                            if bloc["character"] == self.selected_character
+                                            if self.selected_character in bloc["characters"]
                                             for line_index in range(len(bloc["lines"]))]
 
                 self.base_evaluation_introduction()
@@ -447,13 +443,13 @@ class App:
         while True:
             raw_line = self.selected_blocs[bloc_index]["lines"][line_index]
             div = format_line(raw_line)
-            character = self.selected_blocs[bloc_index]["character"]
-            if character == didascalie_str:
+            bloc_characters = self.selected_blocs[bloc_index]["characters"]
+            if didascalie_str in bloc_characters:
                 div.classList.add("didascalie")
             text.insert(0, div)
             if line_index == 0:
-                if character != didascalie_str:
-                    text.insert(0, html.DIV(character, Class="character_in_text"))
+                if didascalie_str not in bloc_characters:
+                    text.insert(0, html.DIV(", ".join(bloc_characters), Class="character_in_text"))
                 text.insert(0, html.BR())
             if line_index > 0:
                 line_index -= 1
@@ -512,13 +508,13 @@ class App:
             raw_line = self.selected_blocs[bloc_index]["lines"][line_index]
             div = format_line(raw_line)
             div.classList.add(f"bloc_line_back_{back_count}")
-            character = self.selected_blocs[bloc_index]["character"]
-            if character == didascalie_str:
+            bloc_characters = self.selected_blocs[bloc_index]["characters"]
+            if didascalie_str in bloc_characters:
                 div.classList.add("didascalie")
             text.insert(0, div)
             if line_index == 0 or back_count == self.HISTORY_LENGTH - 1:
-                if character != didascalie_str:
-                    text.insert(0, html.DIV(character, Class="character_in_text"))
+                if didascalie_str not in bloc_characters:
+                    text.insert(0, html.DIV(", ".join(bloc_characters), Class="character_in_text"))
                 text.insert(0, html.BR())
             if line_index > 0:
                 line_index -= 1
@@ -591,17 +587,17 @@ class App:
             print("choosing random bloc line")
             print(self.total_line_scores)
             # choose bloc line. Lexicographic order. Don't choose last bloc/line
-            worst_score_number = 1000000000
+            worst_score_tuple = (1000000000, 1000000000, 1000000000)
             worst_indexes = []
             for bloc_line_index, (bloc, line) in enumerate(self.selected_bloc_lines):
                 if bloc_line_index == last_bloc_line_index:
                     continue
                 score = self.total_line_scores[(bloc, line)]
-                score_number = score["perfect"]*1000000 + score["almost"]*1000 + score["ko"]
-                if score_number < worst_score_number:
-                    worst_score_number = score_number
+                score_tuple = (score["perfect"], score["almost"], score["ko"])
+                if score_tuple < worst_score_tuple:
+                    worst_score_tuple = score_tuple
                     worst_indexes = []
-                if score_number == worst_score_number:
+                if score_tuple == worst_score_tuple:
                     worst_indexes.append(bloc_line_index)
             bloc_line_index = worst_indexes[randint(len(worst_indexes))]
             print(self.selected_bloc_lines[bloc_line_index])
